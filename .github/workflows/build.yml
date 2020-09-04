@@ -1,0 +1,45 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+          java-package: jdk
+
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Compile
+        run: mvn -B clean compile --file pom.xml
+
+      - name: Run unit tests
+        run: mvn -B test
+
+      - name: Package
+        run: mvn -B install
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: subliz/tree-search-sample
+          tag_with_ref: true
