@@ -1,6 +1,6 @@
-package com.github.rezaep.treesearch.data;
+package com.github.rezaep.treesearch.domain;
 
-import com.github.rezaep.treesearch.data.entity.Tree;
+import com.github.rezaep.treesearch.domain.entity.Tree;
 import com.github.rezaep.treesearch.util.GeoUtils;
 import org.locationtech.jts.geom.Point;
 
