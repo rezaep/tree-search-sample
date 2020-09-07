@@ -20,6 +20,11 @@
         <h2.version>1.4.197</h2.version>
         <h2gis.version>1.5.0</h2gis.version>
         <jacoco.version>0.8.5</jacoco.version>
+        <!-- SonarQube -->
+        <sonar.version>3.7.0.1746</sonar.version>
+        <sonar.projectKey>rezaep_tree-search-sample</sonar.projectKey>
+        <sonar.organization>rezaep-github</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <dependencies>
@@ -110,6 +115,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.version}</version>
             </plugin>
 
             <plugin>
