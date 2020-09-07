@@ -16,7 +16,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class TreeSearchServiceTest {
+class TreeSearchServiceTest {
     @Mock
     private TreeRepository treeRepository;
 
@@ -24,7 +24,7 @@ public class TreeSearchServiceTest {
     private TreeSearchService service;
 
     @Test
-    public void shouldSearchTreeAndConvertResults() {
+    void shouldSearchTreeAndConvertResults() {
         List<TreeCountProjectionModel> searchResult = List.of(
                 new TreeCountProjectionModel("red maple", 30L),
                 new TreeCountProjectionModel("American linden", 1L),

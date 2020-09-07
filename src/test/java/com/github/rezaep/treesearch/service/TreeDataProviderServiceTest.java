@@ -29,7 +29,7 @@ class TreeDataProviderServiceTest {
     private TreeDataProviderService service;
 
     @Test
-    public void testUpdateTreesDataShouldGetTreesDataFromProviderAndPersistThem() {
+    void testUpdateTreesDataShouldGetTreesDataFromProviderAndPersistThem() {
         List<TreeData> treeDataList = getTreeDataList();
         when(dataProvider.getTrees()).thenReturn(treeDataList);
 

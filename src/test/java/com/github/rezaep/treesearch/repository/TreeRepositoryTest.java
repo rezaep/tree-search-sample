@@ -15,12 +15,12 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest(showSql = false)
-public class TreeRepositoryTest {
+class TreeRepositoryTest {
     @Autowired
     private TreeRepository treeRepository;
 
     @Test
-    public void testFindInAreaShouldReturnAllTreesInArea() {
+    void testFindInAreaShouldReturnAllTreesInArea() {
         setupTrees();
 
         List<TreeCountProjectionModel> expected = List.of(
