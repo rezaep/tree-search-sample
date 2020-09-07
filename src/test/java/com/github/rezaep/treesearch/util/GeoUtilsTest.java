@@ -8,14 +8,14 @@ import org.locationtech.jts.geom.Point;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GeoUtilsTest {
+class GeoUtilsTest {
     @ParameterizedTest
     @CsvSource({"40.72309177, -73.84421522",
             "40.79411067, -73.81867946",
             "40.71758074, -73.9366077",
             "40.71353749, -73.93445616",
             "40.66677776, -73.97597938"})
-    public void shouldCreatePointConvertLatitudeAndLongitudeToPoint(double latitude, double longitude) {
+    void shouldCreatePointConvertLatitudeAndLongitudeToPoint(double latitude, double longitude) {
         Point point = GeoUtils.createPoint(latitude, longitude);
 
         assertThat(point.getX()).isEqualTo(longitude);
@@ -28,7 +28,7 @@ public class GeoUtilsTest {
             "40.71758074, -73.9366077, 500",
             "40.71353749, -73.93445616, 12300",
             "40.66677776, -73.97597938, 1000000"})
-    public void shouldCreatePointConvertLatitudeAndLongitudeToPoint(double latitude, double longitude, int radius) {
+    void shouldCreatePointConvertLatitudeAndLongitudeToPoint(double latitude, double longitude, int radius) {
         Point center = GeoUtils.createPoint(latitude, longitude);
         Geometry area = GeoUtils.createCircle(center, radius);
 

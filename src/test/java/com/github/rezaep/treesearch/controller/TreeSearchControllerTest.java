@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(TreeSearchController.class)
-public class TreeSearchControllerTest {
+class TreeSearchControllerTest {
     public static final String TREE_SEARCH_URL = "/tree/search";
 
     @Autowired
@@ -33,7 +33,7 @@ public class TreeSearchControllerTest {
     private TreeSearchService service;
 
     @Test
-    public void shouldSearchTreesAndReturnAggregatedResultsByName() throws Exception {
+    void shouldSearchTreesAndReturnAggregatedResultsByName() throws Exception {
         Map<String, Long> searchResult = Map.of("honeylocust", 3L,
                 "London planetree", 3L,
                 "red maple", 1L,
