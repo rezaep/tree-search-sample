@@ -1,4 +1,4 @@
-# tree-search ![build](https://github.com/rezaep/tree-search-sample/workflows/build/badge.svg)
+# tree-search ![build](https://github.com/rezaep/tree-search-sample/workflows/build/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=alert_status)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=coverage)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample)
 
 A simple project based on Java 11, Spring Boot, PostgreSQL, Hibernate Spatial and JUnit 5.
 
