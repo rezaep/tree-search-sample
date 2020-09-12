@@ -71,7 +71,7 @@ To run the application using Docker, run the following command:
 docker run -d -p 8080:8080 image:tag (e.g. subliz/tree-search:latest)
 ```
 
-#### Start working with APIs
+### Start working with APIs
 Swagger generates documentation of REST APIs, which is accessible using this [link](http://localhost:8080/swagger-ui.html).
 
 ## Authors
