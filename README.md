@@ -1,6 +1,6 @@
 # tree-search-sample ![build](https://github.com/rezaep/tree-search-sample/workflows/build/badge.svg) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=alert_status)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=rezaep_tree-search-sample&metric=coverage)](https://sonarcloud.io/dashboard?id=rezaep_tree-search-sample)
 
-A simple project based on Java 11, Spring Boot, PostgreSQL, Hibernate Spatial and JUnit 5.
+A simple project based on Java 11, Spring Boot, H2, H2GIS, Hibernate Spatial, and JUnit 5.
 
 ## Getting Started
 
@@ -58,19 +58,21 @@ mvn spring-boot:run
 
 #### Run using Docker
 
-To run the application using Docker, run the following command:
-                                                        
-```
-docker run image:tag (e.g. subliz/tree-search:latest)
-```
-## Deployment
-
-To package the Jar file inside a Docker image use following commands:
+To package the Jar file inside a Docker image, use the following commands:
 
 ```
 mvn clean package
 docker build -t image:tag . (e.g. subliz/tree-search:latest)
 ```
+
+To run the application using Docker, run the following command:
+                                                        
+```
+docker run -d -p 8080:8080 image:tag (e.g. subliz/tree-search:latest)
+```
+
+#### Start working with APIs
+Swagger generates documentation of REST APIs, which is accessible using this [link](http://localhost:8080/swagger-ui.html).
 
 ## Authors
 
